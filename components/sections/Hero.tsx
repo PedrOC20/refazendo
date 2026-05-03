@@ -30,7 +30,7 @@ export function Hero() {
 
           <motion.h1
             variants={item}
-            className="font-playfair text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-balance"
+            className="font-playfair text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-balance"
           >
             Transformamos a Sua Casa com Qualidade e Rigor
           </motion.h1>

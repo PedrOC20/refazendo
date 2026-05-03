@@ -1,3 +1,5 @@
+'use client'
+
 import { services } from '@/lib/content'
 import { ServiceCard } from '@/components/ui/ServiceCard'
 

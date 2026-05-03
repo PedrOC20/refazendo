@@ -26,6 +26,7 @@ export function BeforeAfterSlider({ pair }: { pair: BeforeAfterPair }) {
         onMouseDown={(e) => { setDragging(true); updatePosition(e.clientX) }}
         onMouseUp={() => setDragging(false)}
         onMouseLeave={() => setDragging(false)}
+        onTouchStart={(e) => updatePosition(e.touches[0].clientX)}
         onTouchMove={(e) => updatePosition(e.touches[0].clientX)}
         aria-label={`Comparação antes e depois: ${pair.caption}`}
       >

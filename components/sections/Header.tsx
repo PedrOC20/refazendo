@@ -72,7 +72,7 @@ export function Header() {
           </div>
 
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-3 -mr-1"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={menuOpen}

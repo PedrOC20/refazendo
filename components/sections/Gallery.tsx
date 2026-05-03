@@ -19,7 +19,9 @@ export function Gallery() {
           <p className="text-terracota text-sm font-medium tracking-[0.25em] uppercase mb-3">Portfólio</p>
           <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl text-texto mb-4">Os Nossos Trabalhos</h2>
           <p className="text-gray-600 max-w-xl mx-auto">
-            Arrasta o cursor para comparar o antes e o depois das nossas obras.
+            <span className="hidden sm:inline">Arrasta o cursor</span>
+            <span className="sm:hidden">Usa o dedo</span>
+            {' '}para comparar o antes e depois das nossas obras.
           </p>
         </motion.div>
 

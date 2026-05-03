@@ -66,7 +66,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Refazendo. Todos os direitos reservados.{' '}
             <a href="/politica-de-privacidade" className="hover:text-white/60 underline">Política de Privacidade</a>
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <span className="flex items-center gap-1.5 text-white/40 text-xs">
               <Shield size={12} className="text-dourado" />Empresa registada em Portugal
             </span>
