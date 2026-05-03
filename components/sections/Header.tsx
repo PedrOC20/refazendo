@@ -20,6 +20,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -74,6 +75,8 @@ export function Header() {
             className="lg:hidden p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             {menuOpen
               ? <X size={24} className={scrolled ? 'text-texto' : 'text-white'} />
@@ -92,7 +95,7 @@ export function Header() {
             transition={{ duration: 0.2 }}
             className="lg:hidden bg-creme border-t border-creme-dark"
           >
-            <nav className="flex flex-col px-4 py-4 gap-1" aria-label="Menu mobile">
+            <nav id="mobile-menu" className="flex flex-col px-4 py-4 gap-1" aria-label="Menu mobile">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -107,6 +110,7 @@ export function Header() {
                 href="#contacto"
                 onClick={() => setMenuOpen(false)}
                 className="mt-3 bg-terracota text-white text-center py-3 rounded font-medium hover:bg-terracota-dark transition-colors"
+                aria-label="Pedir orçamento gratuito"
               >
                 Pedir Orçamento
               </a>
