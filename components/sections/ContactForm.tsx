@@ -9,9 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { CheckCircle, Send } from 'lucide-react'
 import { serviceTypes, lisbonParishes, howFoundOptions } from '@/lib/content'
 
-// TODO: Cria uma conta em formspree.io → cria um novo form → copia o endpoint aqui
-// Exemplo: 'https://formspree.io/f/xyzabcde'
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? ''
 
 const schema = z.object({
   nome: z.string().min(2, 'O nome deve ter pelo menos 2 caracteres'),
@@ -72,17 +70,28 @@ export function ContactForm() {
 
   const inputClass = 'w-full px-4 py-3 border border-creme-dark rounded bg-white text-texto text-sm focus:outline-none focus:border-terracota focus:ring-1 focus:ring-terracota transition-colors placeholder:text-gray-400'
 
+  const [submitError, setSubmitError] = useState<string | null>(null)
+
   const onSubmit = async (data: FormData) => {
+    if (!FORMSPREE_ENDPOINT || FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID')) {
+      setSubmitError('Formulário não configurado. Contacte-nos pelo telefone.')
+      return
+    }
     setSubmitting(true)
+    setSubmitError(null)
     try {
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(data),
       })
-      if (res.ok) setSubmitted(true)
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setSubmitError('Ocorreu um erro. Por favor tente novamente ou contacte-nos pelo telefone.')
+      }
     } catch {
-      // TODO: mostrar mensagem de erro ao utilizador em produção
+      setSubmitError('Sem ligação à internet. Por favor tente novamente.')
     } finally {
       setSubmitting(false)
     }
@@ -176,6 +185,10 @@ export function ContactForm() {
                   </label>
                   <FieldError message={errors.privacidade?.message} />
                 </div>
+
+                {submitError && (
+                  <p className="text-red-500 text-sm text-center" role="alert">{submitError}</p>
+                )}
 
                 <button
                   type="submit"
