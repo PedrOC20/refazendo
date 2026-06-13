@@ -19,14 +19,15 @@ export function Gallery() {
           <p className="text-terracota text-sm font-medium tracking-[0.25em] uppercase mb-3">Portfólio</p>
           <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl text-texto mb-4">Os Nossos Trabalhos</h2>
           <p className="text-gray-600 max-w-xl mx-auto">
+            Selecção de obras realizadas em 2026 em Lisboa.{' '}
             <span className="hidden sm:inline">Arrasta o cursor</span>
             <span className="sm:hidden">Usa o dedo</span>
-            {' '}para comparar o antes e depois das nossas obras.
+            {' '}para comparar o antes e depois.
           </p>
         </motion.div>
 
         {/* Before/After Sliders */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
           {beforeAfterPairs.map((pair, index) => (
             <motion.div
               key={index}
@@ -62,6 +63,11 @@ export function Gallery() {
             </motion.div>
           ))}
         </div>
+
+        <p className="text-center text-sm text-gray-500 mt-10">
+          Mais fotografias disponíveis a pedido —{' '}
+          <a href="#contacto" className="text-terracota hover:underline">contacte-nos</a>.
+        </p>
       </div>
     </section>
   )

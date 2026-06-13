@@ -117,20 +117,30 @@ export interface BeforeAfterPair {
   caption: string
 }
 
-// Substituir pelas URLs das fotografias reais da empresa
+// Fotografias reais de obras realizadas pela Refazendo em Lisboa.
+// Ficheiros em public/portfolio/.
 export const beforeAfterPairs: BeforeAfterPair[] = [
-  { before: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80', after: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80', beforeAlt: 'Casa de banho antiga antes da remodelação', afterAlt: 'Casa de banho moderna após remodelação em Lisboa', caption: 'Casa de Banho — Cascais, 2024' },
-  { before: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80', after: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80', beforeAlt: 'Cozinha antiga antes da remodelação', afterAlt: 'Cozinha moderna após remodelação em Lisboa', caption: 'Cozinha — Parque das Nações, 2024' },
-  { before: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80', after: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80', beforeAlt: 'Apartamento antes da remodelação', afterAlt: 'Apartamento renovado em Lisboa', caption: 'Apartamento T3 — Príncipe Real, 2023' },
+  {
+    before: '/portfolio/casa-banho-antes.jpg',
+    after: '/portfolio/casa-banho-depois.jpg',
+    beforeAlt: 'Casa de banho em obra com paredes e canalização à vista',
+    afterAlt: 'Casa de banho renovada com revestimento mármore e duche em vidro, Lisboa',
+    caption: 'Casa de Banho — Lisboa, 2026',
+  },
+  {
+    before: '/portfolio/cozinha-antes.jpg',
+    after: '/portfolio/cozinha-depois.jpg',
+    beforeAlt: 'Armários de cozinha antigos com verniz castanho',
+    afterAlt: 'Armários de cozinha pintados de branco após renovação',
+    caption: 'Renovação de Cozinha — Lisboa, 2026',
+  },
 ]
 
 export const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80', alt: 'Remodelação de casa de banho em Lisboa' },
-  { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80', alt: 'Cozinha moderna renovada em Lisboa' },
-  { src: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600&q=80', alt: 'Sala de estar renovada em Lisboa' },
-  { src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80', alt: 'Casa de banho premium em Lisboa' },
-  { src: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80', alt: 'Renovação de moradia em Lisboa' },
-  { src: 'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=600&q=80', alt: 'Revestimento de azulejos artesanais Lisboa' },
+  { src: '/portfolio/telhado-telhas-limpeza.jpg', alt: 'Limpeza profissional de telhado em telha cerâmica, Lisboa' },
+  { src: '/portfolio/telhado-terraco-trabalho.jpg', alt: 'Impermeabilização de terraço — preparação da superfície' },
+  { src: '/portfolio/telhado-terraco-acabamento-claro.jpg', alt: 'Terraço com nova camada de impermeabilizante claro' },
+  { src: '/portfolio/telhado-terraco-acabamento-escuro.jpg', alt: 'Terraço impermeabilizado em prédio em Lisboa' },
 ]
 
 export const lisbonParishes = [

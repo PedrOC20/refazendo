@@ -13,8 +13,8 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1920&q=80"
-        alt="Remodelação de interiores premium em Lisboa pela Refazendo"
+        src="/portfolio/casa-banho-depois.jpg"
+        alt="Casa de banho renovada pela Refazendo em Lisboa — mármore e duche em vidro"
         fill
         className="object-cover"
         priority

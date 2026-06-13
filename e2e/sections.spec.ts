@@ -28,7 +28,7 @@ test.describe('Secções da Landing Page', () => {
     await page.locator('#trabalhos').scrollIntoViewIfNeeded()
     await expect(page.getByRole('heading', { name: 'Os Nossos Trabalhos' })).toBeVisible()
     const sliders = page.locator('[aria-label^="Comparação antes e depois"]')
-    await expect(sliders).toHaveCount(3)
+    await expect(sliders).toHaveCount(2)
   })
 
   test('Before/After slider responde ao clique', async ({ page }) => {
