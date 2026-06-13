@@ -65,7 +65,7 @@ export function Gallery() {
         </div>
 
         <p className="text-center text-sm text-gray-500 mt-10">
-          Mais fotografias disponíveis a pedido —{' '}
+          Mais fotografias disponíveis a pedido -{' '}
           <a href="#contacto" className="text-terracota hover:underline">contacte-nos</a>.
         </p>
       </div>
