@@ -20,8 +20,8 @@ export function Gallery() {
           <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl text-texto mb-4">Os Nossos Trabalhos</h2>
           <p className="text-gray-600 max-w-xl mx-auto">
             Selecção de obras realizadas em 2026 em Lisboa.{' '}
-            <span className="hidden sm:inline">Arrasta o cursor</span>
-            <span className="sm:hidden">Usa o dedo</span>
+            <span className="hidden sm:inline">Arraste o cursor</span>
+            <span className="sm:hidden">Use o dedo</span>
             {' '}para comparar o antes e depois.
           </p>
         </motion.div>
