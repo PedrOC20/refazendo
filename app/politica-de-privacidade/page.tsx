@@ -146,13 +146,14 @@ export default function PoliticaPrivacidadePage() {
             </p>
             <ul className={ul}>
               <li>
-                <strong>Formspree, Inc.</strong> — serviço de envio e gestão de
-                formulários. A Formspree participa no{' '}
+                <strong>Resend, Inc.</strong> (Delaware, EUA) — serviço de envio de
+                emails transaccionais utilizado para nos entregar a mensagem que nos
+                enviou. A Resend participa no{' '}
                 <a href={legal.dpfUrl} target="_blank" rel="noopener noreferrer" className={link}>
                   EU-US Data Privacy Framework
                 </a>
-                . A política de privacidade da Formspree está disponível{' '}
-                <a href={legal.formspreePrivacyUrl} target="_blank" rel="noopener noreferrer" className={link}>
+                . A política de privacidade da Resend está disponível{' '}
+                <a href={legal.resendPrivacyUrl} target="_blank" rel="noopener noreferrer" className={link}>
                   aqui
                 </a>.
               </li>
@@ -166,10 +167,10 @@ export default function PoliticaPrivacidadePage() {
             <h2 className={h2}>6. Transferências internacionais</h2>
             <p className={p}>
               O envio do formulário implica uma transferência de dados para servidores
-              da Formspree, localizados nos Estados Unidos da América. Esta
-              transferência é realizada ao abrigo do EU-US Data Privacy Framework, que
-              foi reconhecido pela Comissão Europeia como mecanismo de garantia
-              adequada (Decisão de Adequação de 10 de Julho de 2023).
+              da Resend, localizados nos Estados Unidos da América. Esta transferência
+              é realizada ao abrigo do EU-US Data Privacy Framework, que foi
+              reconhecido pela Comissão Europeia como mecanismo de garantia adequada
+              (Decisão de Adequação de 10 de Julho de 2023).
             </p>
 
             <h2 className={h2}>7. Por quanto tempo guardamos os dados</h2>

@@ -3,29 +3,13 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
 import type { UseFormRegister } from 'react-hook-form'
 import { motion, AnimatePresence } from 'framer-motion'
 import { CheckCircle, Send } from 'lucide-react'
 import { serviceTypes, lisbonParishes, howFoundOptions } from '@/lib/content'
+import { contactSchema, type ContactFormData } from '@/lib/contact-schema'
 
-const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? ''
-
-const schema = z.object({
-  nome: z.string().min(2, 'O nome deve ter pelo menos 2 caracteres'),
-  email: z.string().email('Endereço de email inválido'),
-  telefone: z.string().min(9, 'O telefone deve ter pelo menos 9 dígitos'),
-  servico: z.string().min(1, 'Por favor seleccione um serviço'),
-  zona: z.string().min(1, 'Por favor seleccione uma zona'),
-  descricao: z.string().min(10, 'A descrição deve ter pelo menos 10 caracteres'),
-  comoEncontrou: z.string().min(1, 'Por favor seleccione uma opção'),
-  privacidade: z.boolean().refine((val) => val === true, {
-    message: 'Deve aceitar a política de privacidade',
-  }),
-  marketing: z.boolean().optional(),
-})
-
-type FormData = z.infer<typeof schema>
+type FormData = ContactFormData
 
 function FieldError({ message }: { message?: string }) {
   if (!message) return null
@@ -66,7 +50,7 @@ export function ContactForm() {
   const [submitting, setSubmitting] = useState(false)
 
   const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(contactSchema),
   })
 
   const inputClass = 'w-full px-4 py-3 border border-creme-dark rounded bg-white text-texto text-sm focus:outline-none focus:border-terracota focus:ring-1 focus:ring-terracota transition-colors placeholder:text-gray-400'
@@ -74,22 +58,19 @@ export function ContactForm() {
   const [submitError, setSubmitError] = useState<string | null>(null)
 
   const onSubmit = async (data: FormData) => {
-    if (!FORMSPREE_ENDPOINT || FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID')) {
-      setSubmitError('Formulário não configurado. Contacte-nos pelo telefone.')
-      return
-    }
     setSubmitting(true)
     setSubmitError(null)
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       })
-      if (res.ok) {
+      const json: { ok?: boolean; error?: string } = await res.json().catch(() => ({}))
+      if (res.ok && json.ok) {
         setSubmitted(true)
       } else {
-        setSubmitError('Ocorreu um erro. Por favor tente novamente ou contacte-nos pelo telefone.')
+        setSubmitError(json.error ?? 'Ocorreu um erro. Por favor tente novamente ou contacte-nos pelo telefone.')
       }
     } catch {
       setSubmitError('Sem ligação à internet. Por favor tente novamente.')

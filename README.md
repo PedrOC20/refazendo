@@ -24,12 +24,12 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 Copia `.env.local.example` para `.env.local` e preenche:
 
-- `NEXT_PUBLIC_FORMSPREE_ENDPOINT` — endpoint do formulário em formspree.io.
+- `RESEND_API_KEY` — API key do Resend (resend.com → API Keys → Create). Server-only, nunca usar com prefixo `NEXT_PUBLIC_`.
+- `CONTACT_DESTINATION_EMAIL` (opcional) — destinatário dos pedidos do formulário. Default: `refazendo.mail@gmail.com`.
 
-O destinatário dos pedidos (email para onde as submissões são entregues) é
-configurado na dashboard da Formspree (Settings → Notifications),
-**não** nesta variável. Para alterar o destinatário, edita lá e não é preciso
-fazer novo deploy.
+Os emails são enviados a partir de `formulario@refazendo.pt` (domínio verificado
+no Resend) com `Reply-To` definido para o email do cliente — assim, responder
+no Gmail responde directamente ao cliente.
 
 ## Learn More
 

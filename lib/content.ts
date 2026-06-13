@@ -27,8 +27,8 @@ export const legal = {
   nipc: '[A PREENCHER: NIPC]',
   fullAddress: '[A PREENCHER: Morada completa, Lisboa]',
   lastUpdated: '2026-06-13',
-  formspreeUrl: 'https://formspree.io',
-  formspreePrivacyUrl: 'https://formspree.io/legal/privacy-policy',
+  resendUrl: 'https://resend.com',
+  resendPrivacyUrl: 'https://resend.com/legal/privacy-policy',
   dpfUrl: 'https://www.dataprivacyframework.gov',
   cnpdUrl: 'https://www.cnpd.pt',
 }
