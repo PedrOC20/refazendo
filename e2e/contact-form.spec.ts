@@ -56,7 +56,7 @@ test.describe('Formulário de Contacto', () => {
     await page.locator('select#servico').selectOption('Casa de Banho')
     await page.locator('select#zona').selectOption('Estrela')
     await page.locator('select#comoEncontrou').selectOption('Google')
-    await page.locator('input[type="checkbox"]').check()
+    await page.getByLabel('Aceitar política de privacidade').check()
     await page.getByRole('button', { name: /enviar pedido/i }).click()
     // Com endpoint não configurado, deve mostrar erro (não crash)
     await expect(page.getByText(/formulário não configurado|ocorreu um erro|sem ligação/i)).toBeVisible()

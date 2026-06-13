@@ -6,8 +6,8 @@ export function getLocalBusinessSchema() {
     name: 'Refazendo',
     description: 'Empresa especializada em remodelações de casas de banho, cozinhas e apartamentos em Lisboa. +10 anos de experiência.',
     url: 'https://refazendo.pt',
-    telephone: '+351912345678',
-    email: 'geral@refazendo.pt',
+    telephone: '+351935336759',
+    email: 'refazendo.mail@gmail.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Lisboa',
@@ -17,13 +17,8 @@ export function getLocalBusinessSchema() {
     serviceType: [
       'Remodelação de Casas de Banho', 'Remodelação de Cozinhas',
       'Remodelação de Apartamentos', 'Electricidade', 'Canalização', 'Pinturas',
+      'Limpeza de Telhados', 'Pinturas e Remodelação de Prédios',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '47',
-      bestRating: '5',
-    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Serviços de Remodelação',
@@ -31,6 +26,8 @@ export function getLocalBusinessSchema() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Remodelação de Casas de Banho' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Remodelação de Cozinhas' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Remodelação de Apartamentos' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Limpeza de Telhados' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pinturas e Remodelação de Prédios' } },
       ],
     },
   }

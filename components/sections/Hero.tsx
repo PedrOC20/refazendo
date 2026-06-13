@@ -36,7 +36,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p variants={item} className="text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Remodelações e reparações em Lisboa — do projeto à entrega, com garantia pós-obra
+            Remodelações e reparações em Lisboa — execução rigorosa com garantia pós-obra
           </motion.p>
 
           <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

@@ -3,8 +3,9 @@ import { Hero } from '@/components/sections/Hero'
 import { Services } from '@/components/sections/Services'
 import { Gallery } from '@/components/sections/Gallery'
 import { Process } from '@/components/sections/Process'
-import { Team } from '@/components/sections/Team'
-import { Testimonials } from '@/components/sections/Testimonials'
+// Team e Testimonials ocultos até existirem fotos da equipa e testemunhos reais de clientes.
+// import { Team } from '@/components/sections/Team'
+// import { Testimonials } from '@/components/sections/Testimonials'
 import { WhyUs } from '@/components/sections/WhyUs'
 import { ContactForm } from '@/components/sections/ContactForm'
 import { Footer } from '@/components/sections/Footer'
@@ -18,8 +19,8 @@ export default function HomePage() {
         <Services />
         <Gallery />
         <Process />
-        <Team />
-        <Testimonials />
+        {/* <Team /> */}
+        {/* <Testimonials /> */}
         <WhyUs />
         <ContactForm />
       </main>

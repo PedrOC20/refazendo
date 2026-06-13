@@ -9,8 +9,6 @@ import { company } from '@/lib/content'
 const navLinks = [
   { label: 'Serviços', href: '#servicos' },
   { label: 'Trabalhos', href: '#trabalhos' },
-  { label: 'Equipa', href: '#equipa' },
-  { label: 'Testemunhos', href: '#testemunhos' },
   { label: 'Contacto', href: '#contacto' },
 ]
 

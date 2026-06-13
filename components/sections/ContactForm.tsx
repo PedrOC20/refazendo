@@ -22,6 +22,7 @@ const schema = z.object({
   privacidade: z.boolean().refine((val) => val === true, {
     message: 'Deve aceitar a política de privacidade',
   }),
+  marketing: z.boolean().optional(),
 })
 
 type FormData = z.infer<typeof schema>
@@ -103,7 +104,7 @@ export function ContactForm() {
         <div className="text-center mb-12">
           <p className="text-terracota text-sm font-medium tracking-[0.25em] uppercase mb-3">Contacto</p>
           <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl text-texto mb-4">Pedir Orçamento Gratuito</h2>
-          <p className="text-gray-600">Preenche o formulário e entraremos em contacto em menos de 24 horas.</p>
+          <p className="text-gray-600">Preencha o formulário e entraremos em contacto em menos de 24 horas.</p>
         </div>
 
         <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm border border-creme-dark">
@@ -155,7 +156,7 @@ export function ContactForm() {
                     <label htmlFor="telefone" className="block text-sm font-medium text-texto mb-1.5">
                       Telefone <span className="text-red-500">*</span>
                     </label>
-                    <input id="telefone" type="tel" placeholder="+351 912 345 678" {...register('telefone')} className={inputClass} aria-label="Número de telefone" />
+                    <input id="telefone" type="tel" placeholder="+351 935 336 759" {...register('telefone')} className={inputClass} aria-label="Número de telefone" />
                     <FieldError message={errors.telefone?.message} />
                   </div>
                   <SelectField label="Tipo de Serviço" id="servico" options={serviceTypes} placeholder="Seleccione um serviço" register={register} error={errors.servico?.message} />
@@ -184,6 +185,15 @@ export function ContactForm() {
                     </span>
                   </label>
                   <FieldError message={errors.privacidade?.message} />
+                </div>
+
+                <div>
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" {...register('marketing')} className="mt-0.5 w-4 h-4 accent-terracota" aria-label="Aceitar receber comunicações comerciais" />
+                    <span className="text-sm text-gray-600">
+                      Aceito receber comunicações comerciais e novidades da Refazendo por email. Posso cancelar a qualquer momento (campo opcional).
+                    </span>
+                  </label>
                 </div>
 
                 {submitError && (

@@ -39,8 +39,6 @@ test.describe('Navegação', () => {
   test('todas as secções estão presentes na página', async ({ page }) => {
     await expect(page.locator('#servicos')).toBeAttached()
     await expect(page.locator('#trabalhos')).toBeAttached()
-    await expect(page.locator('#equipa')).toBeAttached()
-    await expect(page.locator('#testemunhos')).toBeAttached()
     await expect(page.locator('#contacto')).toBeAttached()
   })
 

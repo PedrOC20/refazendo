@@ -20,6 +20,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Variáveis de Ambiente
+
+Copia `.env.local.example` para `.env.local` e preenche:
+
+- `NEXT_PUBLIC_FORMSPREE_ENDPOINT` — endpoint do formulário em formspree.io.
+
+O destinatário dos pedidos (email para onde as submissões são entregues) é
+configurado na dashboard da Formspree (Settings → Notifications),
+**não** nesta variável. Para alterar o destinatário, edita lá e não é preciso
+fazer novo deploy.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

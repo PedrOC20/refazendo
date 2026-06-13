@@ -6,18 +6,31 @@
 
 import {
   Bath, ChefHat, Home, Wrench, Paintbrush, DoorOpen,
-  Zap, HardHat, Award, Users, Eye, Shield,
+  Zap, HardHat, Sparkles, Building2, Award, Users, Eye, Shield,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 export const company = {
   name: 'Refazendo',
   tagline: 'Transformamos espaços, melhoramos vidas',
-  phone: '+351 912 345 678',
-  email: 'geral@refazendo.pt',
+  phone: '+351 935 336 759',
+  email: 'refazendo.mail@gmail.com',
   address: 'Lisboa, Portugal',
   facebook: 'https://facebook.com/refazendo',
   instagram: 'https://instagram.com/refazendo',
+}
+
+// Dados legais para a Política de Privacidade.
+// Substituir os marcadores [A PREENCHER] antes de publicar em produção.
+export const legal = {
+  legalName: 'Refazendo [A PREENCHER: Razão social completa]',
+  nipc: '[A PREENCHER: NIPC]',
+  fullAddress: '[A PREENCHER: Morada completa, Lisboa]',
+  lastUpdated: '2026-06-13',
+  formspreeUrl: 'https://formspree.io',
+  formspreePrivacyUrl: 'https://formspree.io/legal/privacy-policy',
+  dpfUrl: 'https://www.dataprivacyframework.gov',
+  cnpdUrl: 'https://www.cnpd.pt',
 }
 
 export interface Service {
@@ -29,13 +42,15 @@ export interface Service {
 
 export const services: Service[] = [
   { icon: Bath, title: 'Remodelação de Casas de Banho', description: 'Transformamos a sua casa de banho com materiais de qualidade e acabamentos premium.', slug: 'casas-de-banho' },
-  { icon: ChefHat, title: 'Remodelação de Cozinhas', description: 'Cozinhas funcionais e elegantes, desenhadas para o seu estilo de vida.', slug: 'cozinhas' },
-  { icon: Home, title: 'Apartamentos e Moradias', description: 'Remodelação completa de espaços residenciais, do projecto à entrega.', slug: 'apartamentos' },
+  { icon: ChefHat, title: 'Remodelação de Cozinhas', description: 'Cozinhas funcionais e elegantes, executadas com rigor e acabamentos de qualidade.', slug: 'cozinhas' },
+  { icon: Home, title: 'Apartamentos e Moradias', description: 'Remodelação completa de espaços residenciais, com execução rigorosa e respeito pelos prazos.', slug: 'apartamentos' },
   { icon: Wrench, title: 'Reparações e Manutenção', description: 'Serviço rápido e eficaz para todas as reparações do lar.', slug: 'reparacoes' },
   { icon: Paintbrush, title: 'Pinturas Interiores e Exteriores', description: 'Acabamentos perfeitos com tintas de alta qualidade e aplicação profissional.', slug: 'pinturas' },
   { icon: DoorOpen, title: 'Janelas e Portas', description: 'Substituição e instalação de caixilharia com critérios de eficiência energética.', slug: 'janelas-portas' },
   { icon: Zap, title: 'Electricidade e Canalização', description: 'Instalações eléctricas e canalizações certificadas e em conformidade.', slug: 'electricidade' },
   { icon: HardHat, title: 'Obras Gerais de Construção', description: 'Obras estruturais e de ampliação com rigor técnico e respeito pelos prazos.', slug: 'obras-gerais' },
+  { icon: Sparkles, title: 'Limpeza de Telhados', description: 'Limpeza profissional de telhados e remoção de musgo, com inspecção e selagem de pontos críticos.', slug: 'limpeza-telhados' },
+  { icon: Building2, title: 'Pinturas e Remodelação de Prédios', description: 'Pinturas de fachadas e obras em condomínios, com plano de estaleiro e cumprimento de prazos.', slug: 'predios' },
 ]
 
 export interface TeamMember {
@@ -74,10 +89,10 @@ export interface ProcessStep {
 }
 
 export const processSteps: ProcessStep[] = [
-  { number: '01', icon: '📋', title: 'Contacto & Consulta', description: 'Preenche o formulário ou liga-nos. Respondemos em 24 horas.' },
-  { number: '02', icon: '🏠', title: 'Visita ao Local', description: 'Avaliamos o espaço e as tuas necessidades sem qualquer compromisso.' },
+  { number: '01', icon: '📋', title: 'Contacto & Consulta', description: 'Preencha o formulário ou ligue-nos. Respondemos em 24 horas.' },
+  { number: '02', icon: '🏠', title: 'Visita ao Local', description: 'Avaliamos o espaço e as suas necessidades sem qualquer compromisso.' },
   { number: '03', icon: '📄', title: 'Orçamento Detalhado', description: 'Proposta clara e transparente, sem surpresas nem custos ocultos.' },
-  { number: '04', icon: '🔨', title: 'Execução da Obra', description: 'Trabalho rigoroso, com respeito pelo teu espaço e pelos prazos.' },
+  { number: '04', icon: '🔨', title: 'Execução da Obra', description: 'Trabalho rigoroso, com respeito pelo seu espaço e pelos prazos.' },
   { number: '05', icon: '✅', title: 'Entrega & Garantia', description: 'Acompanhamento pós-obra e garantia sobre todo o trabalho realizado.' },
 ]
 
@@ -128,7 +143,8 @@ export const lisbonParishes = [
 
 export const serviceTypes = [
   'Casa de Banho', 'Cozinha', 'Apartamento / Moradia',
-  'Electricidade', 'Canalização', 'Pinturas', 'Reparações Gerais', 'Outro',
+  'Electricidade', 'Canalização', 'Pinturas', 'Reparações Gerais',
+  'Limpeza de Telhados', 'Pinturas/Remodelação de Prédios', 'Outro',
 ]
 
 export const howFoundOptions = ['Google', 'Recomendação', 'Redes Sociais', 'Outro']

@@ -16,11 +16,11 @@ test.describe('Secções da Landing Page', () => {
     await expect(page.getByText('Garantia Pós-Obra').first()).toBeAttached()
   })
 
-  test('Serviços: 8 cards visíveis com título correcto', async ({ page }) => {
+  test('Serviços: 10 cards visíveis com título correcto', async ({ page }) => {
     await page.locator('#servicos').scrollIntoViewIfNeeded()
     await expect(page.getByRole('heading', { name: 'Os Nossos Serviços' })).toBeVisible()
     const cards = page.locator('#servicos h3')
-    await expect(cards).toHaveCount(8)
+    await expect(cards).toHaveCount(10)
     await expect(cards.first()).toBeVisible()
   })
 
@@ -49,19 +49,6 @@ test.describe('Secções da Landing Page', () => {
     // 5 números de passo
     await expect(page.getByText('01').first()).toBeVisible()
     await expect(page.getByText('05').first()).toBeVisible()
-  })
-
-  test('Equipa: 4 membros presentes', async ({ page }) => {
-    await page.locator('#equipa').scrollIntoViewIfNeeded()
-    await expect(page.getByRole('heading', { name: 'A Nossa Equipa' })).toBeVisible()
-    const memberNames = page.locator('#equipa h3')
-    await expect(memberNames).toHaveCount(4)
-  })
-
-  test('Testemunhos: cards com estrelas presentes', async ({ page }) => {
-    await page.locator('#testemunhos').scrollIntoViewIfNeeded()
-    await expect(page.getByRole('heading', { name: 'O Que Dizem de Nós' })).toBeVisible()
-    await expect(page.getByText('4.9 no Google Reviews')).toBeVisible()
   })
 
   test('Porquê Escolher: 4 pilares presentes', async ({ page }) => {
