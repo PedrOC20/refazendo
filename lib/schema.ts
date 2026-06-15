@@ -4,7 +4,7 @@ export function getLocalBusinessSchema() {
     '@type': 'LocalBusiness',
     '@id': 'https://refazendo.pt',
     name: 'Refazendo',
-    description: 'Empresa especializada em remodelações de casas de banho, cozinhas e apartamentos em Lisboa. +10 anos de experiência.',
+    description: 'Especialistas em remodelações de casas de banho, cozinhas e apartamentos em Lisboa. +10 anos de experiência.',
     url: 'https://refazendo.pt',
     telephone: '+351935336759',
     email: 'refazendo.mail@gmail.com',

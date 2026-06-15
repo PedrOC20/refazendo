@@ -63,6 +63,6 @@ test.describe('Secções da Landing Page', () => {
     await expect(footer.getByRole('link', { name: /facebook/i })).toBeVisible()
     await expect(footer.getByRole('link', { name: /instagram/i })).toBeVisible()
     await expect(footer.getByText('RGPD Compliant')).toBeVisible()
-    await expect(footer.getByText('Empresa registada em Portugal')).toBeVisible()
+    await expect(footer.getByText('Trabalhador independente em Portugal')).toBeVisible()
   })
 })

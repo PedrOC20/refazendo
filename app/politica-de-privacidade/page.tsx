@@ -45,12 +45,15 @@ export default function PoliticaPrivacidadePage() {
 
             <h2 className={h2}>1. Quem somos</h2>
             <p className={p}>
-              O responsável pelo tratamento dos seus dados pessoais é:
+              A Refazendo é o nome comercial sob o qual{' '}
+              <strong>{legal.controllerName}</strong> presta serviços de remodelação
+              como trabalhador independente. O responsável pelo tratamento dos seus
+              dados pessoais é:
             </p>
             <ul className={ul}>
-              <li><strong>Denominação:</strong> {legal.legalName}</li>
-              <li><strong>NIPC:</strong> {legal.nipc}</li>
-              <li><strong>Sede:</strong> {legal.fullAddress}</li>
+              <li><strong>Nome:</strong> {legal.controllerName}</li>
+              <li><strong>NIF:</strong> {legal.controllerNif}</li>
+              <li><strong>Local:</strong> {legal.controllerLocation}</li>
               <li>
                 <strong>Email:</strong>{' '}
                 <a href={`mailto:${company.email}`} className={link}>{company.email}</a>

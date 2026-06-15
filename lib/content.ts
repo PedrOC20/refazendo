@@ -21,12 +21,22 @@ export const company = {
 }
 
 // Dados legais para a Política de Privacidade.
-// Substituir os marcadores [A PREENCHER] antes de publicar em produção.
+// Modo actual: trabalhador independente (pessoa singular).
+// Quando a empresa for constituída, comentar este bloco e activar o bloco
+// "empresa" abaixo, ajustando também a secção 1 de app/politica-de-privacidade/page.tsx.
 export const legal = {
-  legalName: 'Refazendo [A PREENCHER: Razão social completa]',
-  nipc: '[A PREENCHER: NIPC]',
-  fullAddress: '[A PREENCHER: Morada completa, Lisboa]',
-  lastUpdated: '2026-06-13',
+  controllerType: 'natural' as const,
+  controllerName: 'Gildásio dos Santos Alves',
+  controllerNif: '300 839 359',
+  controllerLocation: 'Lisboa, Portugal',
+
+  // // Modo futuro: empresa registada
+  // controllerType: 'company' as const,
+  // legalName: '...',
+  // nipc: '...',
+  // fullAddress: '...',
+
+  lastUpdated: '2026-06-15',
   resendUrl: 'https://resend.com',
   resendPrivacyUrl: 'https://resend.com/legal/privacy-policy',
   dpfUrl: 'https://www.dataprivacyframework.gov',

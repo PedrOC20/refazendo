@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: 'Refazendo | Remodelações e Reparações em Lisboa',
-  description: 'Empresa especializada em remodelações de casas de banho, cozinhas e apartamentos em Lisboa. Orçamento gratuito, sem compromisso. +10 anos de experiência.',
+  description: 'Especialistas em remodelações de casas de banho, cozinhas e apartamentos em Lisboa. Orçamento gratuito, sem compromisso. +10 anos de experiência.',
   keywords: ['remodelações Lisboa', 'obras Lisboa', 'casa de banho Lisboa', 'remodelação cozinha Lisboa', 'empresa de obras Lisboa', 'Refazendo'],
   openGraph: {
     title: 'Refazendo | Remodelações e Reparações em Lisboa',

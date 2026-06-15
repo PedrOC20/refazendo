@@ -68,7 +68,7 @@ export function Footer() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <span className="flex items-center gap-1.5 text-white/40 text-xs">
-              <Shield size={12} className="text-dourado" />Empresa registada em Portugal
+              <Shield size={12} className="text-dourado" />Trabalhador independente em Portugal
             </span>
             <span className="flex items-center gap-1.5 text-white/40 text-xs">
               <Shield size={12} className="text-dourado" />RGPD Compliant
